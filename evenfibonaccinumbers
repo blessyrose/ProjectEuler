@@ -1,0 +1,22 @@
+public class evenfibonaccinumbers {
+     public static void main(String[] args) {
+        System.out.println(fibonacci());
+     }
+    
+     public static int fibonacci() {
+         int fibonacci = 0;
+         int a = 1;  
+         int b = 2; 
+         int c = a + b;
+         while (a <= 4000000) {
+             if (a % 2 == 0) {
+                 fibonacci += a;
+             }
+             a = b;
+             b = c;  
+             c = a + b;
+         }
+        
+         return fibonacci;
+     }
+}
