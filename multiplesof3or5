@@ -1,0 +1,45 @@
+public class multiplesof3or5 {
+     public static void main(String[] args) {
+        System.out.println(multiplesof3() + multiplesof5() - exceptions());
+     }
+    
+     public static int multiplesof3() {
+         int i = 0;
+         int x = 0;
+         int y = 0;
+         while (x < 999) { 
+             x = 3 * i;
+             y = y + x;
+             i++;
+         } 
+         return y;
+     }
+    
+     public static int multiplesof5() {
+         int i = 0;
+         int x = 0;
+         int y = 0;
+         while (x < 995) { 
+             x = 5 * i;
+             y = y + x;
+             i++;
+         } 
+         return y;
+     }
+    
+     public static int exceptions() {
+         int i = 0;
+         int x = 0;
+         while (true) {
+             if (i >= 1000) {
+                 break;
+             } else if(i % 15 == 0) {
+                 x = x + i;
+                 i++;
+             } else if(i % 15 != 0) {
+                 i++; 
+             }
+         }
+         return x;
+     }
+}
