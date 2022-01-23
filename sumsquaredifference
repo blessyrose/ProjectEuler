@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class sumsquaredifference {
+     public static void main(String[] args) {
+         System.out.println(wholesquare() - individualsquare());
+     }
+    
+     public static int individualsquare() {
+         int i = 1;
+         int sum = 0;
+         while (i <= 100) {
+             sum += (int)(Math.pow(i, 2));
+             i++;
+         }
+        
+         return sum;
+     }
+    
+     public static int wholesquare() {
+         int i = 1;
+         int sum = 0;
+         while(i <= 100) {
+             sum += i;
+             i++;
+         }
+         int square = (int)(Math.pow(sum, 2));
+        
+         return square;
+     }
+}
